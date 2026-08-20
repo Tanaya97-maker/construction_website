@@ -1,0 +1,6 @@
+{
+  "name": "Construction Website",
+  "description": "Commercial and residential construction company website showcasing services, project portfolio, transparent processes, and building insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

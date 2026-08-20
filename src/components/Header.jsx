@@ -22,7 +22,6 @@ const Header = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setServicesOpen(false);
   }, [location.pathname]);
 
   const navLinkClass = ({ isActive }) =>
