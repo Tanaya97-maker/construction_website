@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Tinos:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-amber-gold: #F5A623;
+  --color-light-grey: #f3f4f6;
+  --color-dark-grey: #1f2937;
+  --color-construction-black: #111827;
+
+  --font-heading: "Tinos", serif;
+  --font-paragraph: "Open Sans", sans-serif;
+  --font-other: "Rajdhani", sans-serif;
+
+  --background-image-grid-pattern: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20z' fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  body {
+    @apply font-other text-construction-black bg-light-grey antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-construction-black font-semibold tracking-tight;
+  }
+  
+  p {
+    @apply font-paragraph text-dark-grey leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .construction-border {
+    @apply border border-dark-grey/20;
+  }
+  
+  .construction-border-t {
+    @apply border-t border-dark-grey/20;
+  }
+  
+  .construction-border-b {
+    @apply border-b border-dark-grey/20;
+  }
+
+  .construction-box {
+    @apply relative border border-dark-grey/20 bg-white;
+  }
+  
+  .construction-box::before {
+    content: '';
+    @apply absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-amber-gold;
+  }
+  
+  .construction-box::after {
+    content: '';
+    @apply absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-amber-gold;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-heading font-bold uppercase tracking-wider transition-all duration-300 border-2;
+  }
+  
+  .btn-primary {
+    @apply bg-amber-gold border-amber-gold text-construction-black hover:bg-construction-black hover:border-construction-black hover:text-amber-gold;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-construction-black text-construction-black hover:bg-construction-black hover:text-white;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
